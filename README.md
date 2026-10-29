@@ -20,6 +20,6 @@ Abre <http://localhost:3000>.
 
 ## Publicación
 
-`npm run build` genera el sitio estático en `out/`. Cada push a `main` lo publica en el sitio web estático de Azure Storage (cuenta `maisonpoupouweb`) mediante GitHub Actions (`.github/workflows/publicar-azure.yml`). El workflow necesita el secreto `AZURE_STORAGE_CONNECTION_STRING` en GitHub.
+`npm run build` genera el sitio estático en `out/`. Cada push a `main` lo publica en el sitio web estático de Azure Storage (cuenta `maisonpoupouweb`) mediante GitHub Actions (`.github/workflows/publicar-azure.yml`). El workflow entra a Azure con OIDC (aplicación `maison-poupou-github`), sin claves guardadas en GitHub.
 
 URL: <https://maisonpoupouweb.z14.web.core.windows.net/>

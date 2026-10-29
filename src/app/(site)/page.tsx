@@ -12,15 +12,15 @@ const delay = (ms: number) => ({ "--reveal-delay": `${ms}ms` }) as CSSProperties
 // Los tres pilares de la marca (CLAUDE.md §1)
 const pillars = [
   {
-    title: "L’Architecture",
+    title: "La arquitectura",
     text: "Gallineros y mobiliario de madera noble, pensados como pequeñas arquitecturas para el jardín y la casa.",
   },
   {
-    title: "La Nutrition",
+    title: "La nutrición",
     text: "Recetas orgánicas de fincas de Cundinamarca, sin conservantes: nutrición gourmet para cada especie.",
   },
   {
-    title: "L’Intérieur",
+    title: "El interior",
     text: "Lino, cerámica y latón: piezas que conviven con tus muebles en lugar de esconderse de ellos.",
   },
 ];
@@ -33,7 +33,7 @@ const steps = [
 
 const promises = [
   { title: "Envíos nacionales", text: "A toda Colombia" },
-  { title: "Fait main", text: "Talleres colombianos" },
+  { title: "Hecho a mano", text: "Talleres colombianos" },
   { title: "Garantía", text: "1 año en gallineros" },
   { title: "Asesoría", text: "Personal, sin bots" },
 ];
@@ -47,15 +47,15 @@ export default function Home() {
     <>
       <Hero scenes={heroScenes} />
 
-      {/* Notre Vision */}
+      {/* Nuestra visión */}
       <section id="vision" className="container-editorial py-20 md:py-32" aria-labelledby="vision-title">
         <div className="mx-auto flex max-w-4xl flex-col items-center gap-6 text-center">
           {/* El lema es la pieza tipográfica de la página: siempre en itálica completa */}
           <h2 id="vision-title" data-reveal className="font-serif text-display font-light italic">
-            Chicken life, but make it French.
+            Vida de gallina, pero a la francesa.
           </h2>
           <p data-reveal style={delay(120)} className="max-w-2xl text-[1.0625rem] text-ink-soft">
-            Una Maison nacida en Bogotá con alma de atelier parisino. Creemos que el bienestar animal es el verdadero
+            Una casa nacida en Bogotá con alma de taller parisino. Creemos que el bienestar animal es el verdadero
             lujo, y que lo cotidiano —un gallinero, un comedero, una cama— merece belleza.
           </p>
         </div>
@@ -76,11 +76,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Pièces Signature: vitrina sin precios; todo se consulta por WhatsApp */}
+      {/* Piezas insignia: vitrina sin precios; todo se consulta por WhatsApp */}
       <section id="signature" className="bg-brume py-20 md:py-28" aria-labelledby="signature-title">
         <div className="container-editorial">
           <SectionHeading
-            title={<span id="signature-title">Pièces Signature</span>}
+            title={<span id="signature-title">Piezas insignia</span>}
             intro="Una selección de nuestras piezas más queridas. El catálogo completo, los precios y la disponibilidad te los compartimos por WhatsApp."
           />
 
@@ -125,14 +125,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* L’Atelier */}
+      {/* El taller */}
       <section id="atelier" className="container-editorial py-20 md:py-28" aria-labelledby="atelier-title">
         <div className="grid items-center gap-10 md:grid-cols-2 md:gap-16">
           <div data-reveal="mask">
             <EditorialImage
               src="/images/coleccion-atelier.jpg"
               alt="Taller artesanal de MAISON POUPOU"
-              label="L’Atelier"
+              label="El taller"
               ratio="portrait"
               tone="brume"
               parallax
@@ -141,7 +141,7 @@ export default function Home() {
           </div>
           <div data-reveal style={delay(120)} className="flex flex-col items-start gap-5">
             <h2 id="atelier-title" className="font-serif text-title font-light">
-              Fait main, matières nobles
+              Hecho a mano, materiales nobles
             </h2>
             <p className="max-w-md text-base text-ink-soft">
               Cada pieza nace en pequeños talleres de Bogotá, Boyacá y Ráquira. Producimos poco, con calma y para que
@@ -158,11 +158,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Comment commander: la venta vive en WhatsApp, así que se explica en tres pasos */}
+      {/* Cómo pedir: la venta vive en WhatsApp, así que se explica en tres pasos */}
       <section id="commander" className="bg-brume py-20 md:py-28" aria-labelledby="commander-title">
         <div className="container-editorial">
           <SectionHeading
-            title={<span id="commander-title">Tout se passe sur WhatsApp</span>}
+            title={<span id="commander-title">Todo pasa por WhatsApp</span>}
             intro="Sin carritos ni formularios: una conversación con nuestro equipo, como en una boutique de barrio en París."
           />
 

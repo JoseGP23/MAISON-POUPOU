@@ -45,7 +45,7 @@ const POSES_DESKTOP: Pose[] = [
 ];
 const TRAIL = [0, 1, 2];
 
-/** Corta el titular en la coma ("L’Art de Vivre, / réinventé"): así nunca queda "L’Art de / Vivre". */
+/** Corta el titular en la coma ("El arte de vivir, / reinventado"): así nunca queda "El arte de / vivir". */
 function TitleLines({ text }: { text: string }) {
   const [first, ...rest] = text.split(", ");
   if (!rest.length) return text;

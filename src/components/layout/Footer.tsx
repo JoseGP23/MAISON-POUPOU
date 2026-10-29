@@ -6,25 +6,25 @@ import { FooterSocial, FooterWhatsApp } from "./FooterContact";
 // Footer de la web de marca: sin catálogo, todo se consulta por WhatsApp
 const columns = [
   {
-    title: "La Maison",
+    title: "Conócenos",
     links: [
-      { href: "/#vision", label: "Notre Vision" },
-      { href: "/#signature", label: "Pièces Signature" },
-      { href: "/#atelier", label: "L’Atelier" },
-      { href: "/our-story", label: "Our Story" },
+      { href: "/#vision", label: "Nuestra visión" },
+      { href: "/#signature", label: "Piezas insignia" },
+      { href: "/#atelier", label: "El taller" },
+      { href: "/our-story", label: "Nuestra historia" },
     ],
   },
   {
-    title: "Service",
+    title: "Servicio",
     links: [
-      { href: "/#commander", label: "Comment commander" },
+      { href: "/#commander", label: "Cómo pedir" },
       { href: "/legal/envios-devoluciones", label: "Envíos & Devoluciones" },
-      { href: "/legal/garantia-poulaillers", label: "Garantía Poulaillers" },
+      { href: "/legal/garantia-poulaillers", label: "Garantía de gallineros" },
     ],
   },
 ];
 
-// Envíos y garantía ya están en la columna Service
+// Envíos y garantía ya están en la columna Servicio
 const legal = [{ href: "/legal/terminos", label: "Términos del Servicio" }];
 
 export function Footer() {
@@ -39,9 +39,9 @@ export function Footer() {
         <div className="container-editorial relative flex flex-col items-start gap-8 py-16 md:flex-row md:items-end md:justify-between md:py-24">
           <div className="flex max-w-2xl flex-col gap-4">
             <p className="font-serif text-[2.5rem] font-light leading-[1.05] md:text-[4rem]">
-              Écrivez-nous,
+              Escríbenos,
               <br />
-              on vous répond.
+              te respondemos.
             </p>
             <p className="max-w-md text-base text-porcelaine/75">
               ¿Dudas con una talla, un gallinero o un envío? Te asesoramos personalmente por WhatsApp.
@@ -56,7 +56,7 @@ export function Footer() {
           <div className="flex flex-col items-start gap-6">
             <Logo size="md" className="items-start!" />
             <p className="max-w-xs font-serif text-[1.375rem] leading-snug italic text-ink-soft">
-              Chicken life, but make it French.
+              Vida de gallina, pero a la francesa.
             </p>
             <FooterSocial />
           </div>
@@ -101,7 +101,7 @@ export function Footer() {
                 </li>
               ))}
             </ul>
-            <p className="text-sm text-ink-soft">© 2026 MAISON POUPOU. Tous droits réservés.</p>
+            <p className="text-sm text-ink-soft">© 2026 MAISON POUPOU. Todos los derechos reservados.</p>
           </div>
         </div>
       </div>

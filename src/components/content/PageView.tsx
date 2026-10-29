@@ -10,10 +10,10 @@ import { RichText } from "./RichText";
 const legalLinks: Record<(typeof legalPageIds)[number], string> = {
   "envios-devoluciones": "Envíos & Devoluciones",
   terminos: "Términos del Servicio",
-  "garantia-poulaillers": "Garantía Poulaillers (1 año)",
+  "garantia-poulaillers": "Garantía de gallineros (1 año)",
 };
 
-/** Página de contenido (Our Story y legales). */
+/** Página de contenido (Nuestra historia y legales). */
 export function PageView({ id }: { id: PageId }) {
   const page = seedPages[id];
   const isLegal = (legalPageIds as readonly string[]).includes(id);
@@ -100,7 +100,7 @@ function ClosingBand() {
   return (
     <section className="mt-20 flex justify-center border-t border-givre pt-16 md:mt-28">
       <ButtonLink href="/#signature" variant="secondary" icon={<ArrowRightIcon size={16} />}>
-        Ver las piezas signature
+        Ver las piezas insignia
       </ButtonLink>
     </section>
   );

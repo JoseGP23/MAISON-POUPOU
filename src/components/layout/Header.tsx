@@ -109,7 +109,7 @@ export function Header() {
               className={`${iconBtn} md:w-auto md:gap-2.5 md:px-2.5`}
               aria-label="Escríbenos por WhatsApp"
             >
-              <span className="caps hidden md:inline">Contact</span>
+              <span className="caps hidden md:inline">Contacto</span>
               <WhatsAppIcon size={20} />
             </a>
           </div>

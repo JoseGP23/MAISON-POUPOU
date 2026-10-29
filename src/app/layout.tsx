@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     template: "%s — MAISON POUPOU",
   },
   description:
-    "Boutique lifestyle de alta gama para gallinas y mascotas. Hábitats, nutrición gourmet y accesorios con alma de atelier parisino, desde Bogotá.",
+    "Boutique lifestyle de alta gama para gallinas y mascotas. Hábitats, nutrición gourmet y accesorios con alma de taller parisino, desde Bogotá.",
 };
 
 export const viewport: Viewport = {

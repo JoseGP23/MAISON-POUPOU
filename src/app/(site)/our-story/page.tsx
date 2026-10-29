@@ -3,7 +3,7 @@ import { PageView } from "@/components/content/PageView";
 import { seedPages } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Our Story",
+  title: "Nuestra historia",
   description: seedPages["our-story"].intro,
 };
 

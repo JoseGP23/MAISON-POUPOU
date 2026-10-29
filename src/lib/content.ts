@@ -17,25 +17,25 @@ export const legalPageIds = ["envios-devoluciones", "terminos", "garantia-poulai
 
 export const seedPages: Record<PageId, PageContent> = {
   "our-story": {
-    title: "Née à Bogotá, l’âme parisienne",
+    title: "Nacida en Bogotá, con alma parisina",
     intro:
-      "Una Maison nacida del cariño por las pequeñas aves, con la mirada puesta en los ateliers de París y los pies en la Sabana de Bogotá.",
+      "Una casa nacida del cariño por las pequeñas aves, con la mirada puesta en los talleres de París y los pies en la Sabana de Bogotá.",
     image: "/images/hero-fondo-balcon-paris.jpg",
     body: `## El origen del nombre
 
-En casa, a las pequeñas aves y mascotas siempre se les llamó «poupou»: una palabra suave, casi un arrullo, que nombra a quienes nos acompañan cada día. Cuando decidimos crear una marca, quisimos que conservara esa ternura y la elevara con el concepto chic de una Maison francesa. Así nació MAISON POUPOU.
+En casa, a las pequeñas aves y mascotas siempre se les llamó «poupou»: una palabra suave, casi un arrullo, que nombra a quienes nos acompañan cada día. Cuando decidimos crear una marca, quisimos que conservara esa ternura y la elevara con el concepto chic de una casa francesa. Así nació MAISON POUPOU.
 
 ## Bogotá, con alma parisina
 
-Fundamos la Maison en Bogotá, entre jardines con niebla de madrugada y patios donde las gallinas pasean entre las hortensias. De París tomamos la exigencia del atelier: la proporción, el detalle, la convicción de que lo cotidiano merece belleza. De Colombia, la madera, el barro, el tejido y las manos que saben trabajarlos.
+Fundamos MAISON POUPOU en Bogotá, entre jardines con niebla de madrugada y patios donde las gallinas pasean entre las hortensias. De París tomamos la exigencia del taller: la proporción, el detalle, la convicción de que lo cotidiano merece belleza. De Colombia, la madera, el barro, el tejido y las manos que saben trabajarlos.
 
 ## ¿Por qué las gallinas?
 
 Porque fueron las primeras. Antes de los perros y los gatos de la casa, estaban ellas: curiosas, sociables, sorprendentemente cariñosas. Las gallinas son las protagonistas de nuestra historia y de nuestra marca, y creemos que merecen hábitats tan bien pensados como cualquier otro rincón del hogar.
 
-## Une Maison pour tous
+## Una casa para todos
 
-Con el tiempo, la Maison se abrió a perros, gatos, aves, peces, pequeños compañeros y especies exóticas. Cambian las especies, pero no la promesa: arquitectura, nutrición gourmet y diseño de interiores al servicio del bienestar animal. Chicken life, but make it French.`,
+Con el tiempo, MAISON POUPOU se abrió a perros, gatos, aves, peces, pequeños compañeros y especies exóticas. Cambian las especies, pero no la promesa: arquitectura, nutrición gourmet y diseño de interiores al servicio del bienestar animal. Vida de gallina, pero a la francesa.`,
   },
   "envios-devoluciones": {
     title: "Envíos & Devoluciones",
@@ -108,7 +108,7 @@ Los textos, fotografías, diseños y la marca MAISON POUPOU son de nuestra propi
 Estos términos se rigen por las leyes de la República de Colombia.`,
   },
   "garantia-poulaillers": {
-    title: "Garantía Poulaillers (1 año)",
+    title: "Garantía de gallineros (1 año)",
     intro: "Nuestros gallineros están hechos para durar. Si algo falla en su primer año, lo resolvemos.",
     image: null,
     draft: true,

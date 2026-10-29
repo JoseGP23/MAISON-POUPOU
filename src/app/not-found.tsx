@@ -11,7 +11,7 @@ export default function NotFound() {
         <HenSilhouette size={88} className="text-ocre/50" />
         <p className="label">Error 404</p>
         <h1 className="font-serif text-display font-light">
-          La poule s’est échappée
+          La gallina se escapó
         </h1>
         <p className="max-w-md text-[1rem] text-ink-soft">
           La página que buscas no existe o cambió de lugar. Volvamos a casa.

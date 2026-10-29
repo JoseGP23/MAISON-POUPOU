@@ -1,12 +1,17 @@
 # Cada push a main compila la web estática y la sube al sitio web estático de
 # Azure Storage (cuenta maisonpoupouweb, contenedor $web).
-# Requiere el secreto AZURE_STORAGE_CONNECTION_STRING en GitHub.
+# Entra a Azure con OIDC (aplicación "maison-poupou-github", rol Storage Blob
+# Data Contributor sobre la cuenta): no hace falta guardar claves en GitHub.
 name: Publicar en Azure
 
 on:
   push:
     branches: [main]
   workflow_dispatch:
+
+permissions:
+  id-token: write
+  contents: read
 
 concurrency:
   group: publicar-azure
@@ -26,11 +31,15 @@ jobs:
       - run: npm ci
       - run: npm run build
 
+      - uses: azure/login@v2
+        with:
+          client-id: 6037fb93-8f63-4e23-b2fc-810ad27103a4
+          tenant-id: c06fb559-1b68-4b84-a14f-47d0d837a5ab
+          subscription-id: e130c011-17eb-4341-a6e0-d8cdd27c51cc
+
       - name: Subir a Azure Storage
-        env:
-          AZURE_STORAGE_CONNECTION_STRING: ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}
         run: |
-          opts="--overwrite --only-show-errors -o none"
+          opts="--account-name maisonpoupouweb --auth-mode login --overwrite --only-show-errors -o none"
           # HTML y datos de navegación: siempre se revalidan
           az storage blob upload-batch -d '$web' -s out $opts --content-cache-control "public, max-age=0, must-revalidate"
           # JS, CSS y fuentes llevan hash en el nombre: caché de un año
