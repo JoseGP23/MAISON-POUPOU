@@ -1,0 +1,39 @@
+# Cada push a main compila la web estática y la sube al sitio web estático de
+# Azure Storage (cuenta maisonpoupouweb, contenedor $web).
+# Requiere el secreto AZURE_STORAGE_CONNECTION_STRING en GitHub.
+name: Publicar en Azure
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: publicar-azure
+  cancel-in-progress: true
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+      - run: npm run build
+
+      - name: Subir a Azure Storage
+        env:
+          AZURE_STORAGE_CONNECTION_STRING: ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}
+        run: |
+          opts="--overwrite --only-show-errors -o none"
+          # HTML y datos de navegación: siempre se revalidan
+          az storage blob upload-batch -d '$web' -s out $opts --content-cache-control "public, max-age=0, must-revalidate"
+          # JS, CSS y fuentes llevan hash en el nombre: caché de un año
+          az storage blob upload-batch -d '$web/_next/static' -s out/_next/static $opts --content-cache-control "public, max-age=31536000, immutable"
+          # Fotos: una semana (pueden reemplazarse con el mismo nombre)
+          az storage blob upload-batch -d '$web/images' -s out/images $opts --content-cache-control "public, max-age=604800"

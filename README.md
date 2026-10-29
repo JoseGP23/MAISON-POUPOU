@@ -20,4 +20,6 @@ Abre <http://localhost:3000>.
 
 ## Publicación
 
-`npm run build` genera el sitio estático en `out/`. Cada push a `main` lo publica en Azure Static Web Apps mediante GitHub Actions. La configuración de Azure (página 404 y caché) está en `public/staticwebapp.config.json`.
+`npm run build` genera el sitio estático en `out/`. Cada push a `main` lo publica en el sitio web estático de Azure Storage (cuenta `maisonpoupouweb`) mediante GitHub Actions (`.github/workflows/publicar-azure.yml`). El workflow necesita el secreto `AZURE_STORAGE_CONNECTION_STRING` en GitHub.
+
+URL: <https://maisonpoupouweb.z14.web.core.windows.net/>

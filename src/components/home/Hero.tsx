@@ -115,6 +115,8 @@ function StoryHero({ scenes }: { scenes: HeroScene[] }) {
 
     const readTarget = () => {
       const vh = stage.clientHeight;
+      // Al navegar a otra página el hero se desmonta y mide 0: conserva el valor
+      if (!vh) return progress.target;
       const scrolled = -section.getBoundingClientRect().top;
       return clamp(scrolled / vh, 0, last);
     };
