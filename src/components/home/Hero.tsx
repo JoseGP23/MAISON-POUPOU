@@ -53,6 +53,7 @@ function posesFor(scenes: HeroScene[], base: BasePose[]): Pose[] {
     const floating = !!subject.floating;
     return {
       ...b,
+      x: subject.x ?? b.x,
       y: floating ? b.y : Math.max(b.y, 0),
       scale: b.scale * (subject.scale ?? 1),
       rz: floating ? -4 : 0,
@@ -293,7 +294,7 @@ function StoryHero({ scenes }: { scenes: HeroScene[] }) {
               aria-hidden
               className="absolute -bottom-[3%] left-[12%] right-[12%] h-[7%] rounded-[50%] bg-[radial-gradient(closest-side,rgba(31,53,80,0.55),rgba(31,53,80,0))] opacity-0 will-change-transform"
             />
-            <div data-pet className="absolute inset-0 will-change-transform">
+            <div data-pet className="absolute inset-0 origin-bottom will-change-transform">
               {scenes.map((scene, i) => (
                 <div key={scene.id} data-pose className="absolute inset-0" style={{ opacity: i === 0 ? 1 : 0, visibility: i === 0 ? "visible" : "hidden" }}>
                   <Image

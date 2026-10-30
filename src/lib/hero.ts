@@ -12,6 +12,8 @@ export type HeroScene = {
     alt: string;
     /** Tamaño relativo en pantalla (1 = normal). Útil para animales apaisados. */
     scale?: number;
+    /** Posición horizontal en fracción de pantalla (0 = centrado, negativo = izquierda). */
+    x?: number;
     /** Flota en el aire: la sombra del suelo se achica y el vaivén es mayor. */
     floating?: boolean;
   };
@@ -34,7 +36,7 @@ export const heroScenes: HeroScene[] = [
     id: "perro",
     title: "Elegancia parisina",
     text: "Camas de lino, collares de cuero vegano y paseos con estilo para el perro de la casa.",
-    subject: { src: "/images/hero-perro.png", alt: "Perro Cavalier King Charles de pie" },
+    subject: { src: "/images/hero-perro.png", alt: "Perro Cavalier King Charles de pie", scale: 1.15, x: -0.02 },
     background: { src: "/images/hero-fondo-balcon-paris.jpg", alt: "", position: "78% 50%" },
     tint: "#EBCFAE",
   },
