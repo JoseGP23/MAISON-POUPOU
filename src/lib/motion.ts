@@ -63,7 +63,7 @@ export function createSpring(initial: number, { damping = 1, response = 0.4 } = 
  */
 export function swapLayers(layers: HTMLElement[], i0: number, e: number, maxBlur = 4) {
   // Solape mínimo (y desenfocado) para que, si el usuario se detiene justo
-  // en el medio, la gallina no desaparezca del todo
+  // en el medio, el animal no desaparezca del todo
   const out = 1 - smoothstep(0.35, 0.6, e);
   const inn = smoothstep(0.4, 0.65, e);
   const blur = maxBlur * clamp(1 - Math.abs(e - 0.5) / 0.2);
